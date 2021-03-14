@@ -1,5 +1,6 @@
 provider "aws" {
   region     = var.aws_region
+  shared_credentials_file = "/usr/bin/.aws/credentials"
 }
 
 resource "aws_vpc" "first_vpc" {
