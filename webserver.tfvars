@@ -1,10 +1,10 @@
 aws_region       = "us-east-1"
 vpc_cidr         = "10.0.0.0/16"
-vpc_tags         = "mywebservervpc"
+vpc_tags         = "myjenkinsvpc"
 vpc_subnet       = "10.0.2.0/24"
-subnet_tags      = "mywebsubnet"
-igw_tags         = "mywebigw"
-route_table_tags = "mywebroutetable"
+subnet_tags      = "myjenkinsubnet"
+igw_tags         = "myigw"
+route_table_tags = "myjenkinsroutetable"
 securitygr       = "mywebsg"
 from_port        = 22
 to_port          = 22 
