@@ -1,6 +1,6 @@
 
 ---
-  - hosts : all
+  - hosts : webserver
     become : True
     become_method : sudo
     become_user : ubuntu
@@ -17,11 +17,19 @@
         - tree
         - net-tools
         - nginx
-        - docker
+        - httpd
         
-    - name : Start service  , if not started
+    - name : Start service nginx , if not started
       service :
        name : nginx started
        state : started
+       enabled : True
+       
+    - name : Start service httpd , if not started
+      service :
+       name : httpd started
+       state : started
+       enabled : True
+       
 
 
