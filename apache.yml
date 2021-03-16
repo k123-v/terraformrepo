@@ -31,5 +31,9 @@
        state : started
        enabled : True
        
+    - name : Deploy Statsic website
+      copy :
+       src : index.html
+       dest : /var/www/html/
 
 
