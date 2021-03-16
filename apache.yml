@@ -1,0 +1,27 @@
+
+---
+  - hosts : all
+    become : True
+    become_method : sudo
+    become_user : ubuntu
+    gather_facts : True
+
+    tasks:
+
+    - name: Install a list of packages
+      apt :
+       name : "{{packages}}"
+       state : present
+      vars:
+       packages :
+        - tree
+        - net-tools
+        - nginx
+        - docker
+        
+    - name : Start service  , if not started
+      service :
+       name : nginx started
+       state : started
+
+
